@@ -10,5 +10,4 @@ mkdir diary
 cd diary
 git init
 git status
-
-```
+{% endhighlight %}```
