@@ -63,8 +63,8 @@ $ git log
 `git log` give the history of what is done recently:
 ```
 # commit f22b25e3233b4645dabd0d81e651fe074bd8e73b
-#Author: Vlad Dracula <vlad@tran.sylvan.ia>
-#Date:   Thu Aug 22 09:51:46 2013 -0400
+#Author: vildeka <vilde.kaldhusdal@gmail.com>
+#Date:   Thu Feb 22 09:51:46 2013 -0400
 #
-#    Start notes on Mars as a base 
+#    write what updates was made here
 ```
