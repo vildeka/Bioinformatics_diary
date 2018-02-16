@@ -5,9 +5,12 @@ which is as I understand it the most imporatnt commands when using GitHub.
 
 GitHub works two ways. you can either make a repository online and clone it to your computer. OR you can create the repository on your computer and then add, commit and push the new repository to GitHub. 
 
+Make a repository localy:
 ```
 mkdir diary
 cd diary
-git init
-git status
+git init        #this creates the hidden folder git which makes it a repository
+git status      
+```
+The `git status` should give a output looking like this:
 ```
