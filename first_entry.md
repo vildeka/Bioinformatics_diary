@@ -7,10 +7,16 @@ GitHub works two ways. you can either make a repository online and clone it to y
 
 Make a repository localy:
 ```
-mkdir diary
-cd diary
-git init        #this creates the hidden folder git which makes it a repository
-git status      
+$ mkdir diary
+$ cd diary
+$ git init        #this creates the hidden folder git which makes it a repository
+$ git status      
 ```
 The `git status` should give a output looking like this:
 ```
+# On branch master
+#
+# Initial commit
+#
+nothing to commit (create/copy files and use "git add" to track)
+´´´
