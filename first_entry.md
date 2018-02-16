@@ -9,5 +9,4 @@ GitHub works two ways. you can either make a repository online and clone it to y
 mkdir diary
 cd diary
 git init
-git status
-```{% endhighlight %}
+git status{% endhighlight %}```
