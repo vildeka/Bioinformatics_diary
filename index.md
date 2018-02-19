@@ -1,4 +1,4 @@
-# *Entry 16.02.2018*
+# *Friday 16.02.2018*
 
 Yesterday was the first course day of KB8024. I made my first GitHub account and learnt how to add, commit and push
 which is as I understand it the most imporatnt commands when using GitHub.
@@ -54,7 +54,7 @@ output looks like this:
 #  create mode 100644 first_entry.md
 ```
 Git stores a permanent copy if the file inside the special `.git diectory`.
-It is calle a commit and has the identifier f22b25e
+It is called a commit and has the identifier f22b25e
 
 _To push the update to GitHub:_
 ```
