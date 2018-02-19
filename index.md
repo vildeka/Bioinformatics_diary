@@ -1,4 +1,4 @@
-### *Friday 16.02.2018*
+# *Friday 16.02.2018*
 
 Yesterday was the first course day of KB8024. I made my first GitHub account and learnt how to add, commit and push
 which is as I understand it the most imporatnt commands when using GitHub.
