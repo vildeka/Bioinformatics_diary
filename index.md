@@ -55,7 +55,7 @@ The `git status` should give a output looking like this:
 #
 nothing to commit (create/copy files and use "git add" to track)
 ```
-_Make the first diary entry:_
+__Make the first diary entry:__
 ```
 $ nano first_entry.md  #the format should be md for markdown
 '''inside the text editior nano you write the markdown text 
@@ -90,7 +90,7 @@ output looks like this:
 Git stores a permanent copy if the file inside the special `.git diectory`.
 It is called a commit and has the identifier f22b25e
 
-_To push the update to GitHub:_
+__To push the update to GitHub:__
 ```
 $ git push
 $ git log
