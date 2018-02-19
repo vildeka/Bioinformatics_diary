@@ -4,7 +4,7 @@ I split the file content into three list containnig the identifier, aa sequence 
 Then I made it into a dictionary where the identifier is the key, and the sequence and topology is the two values beloning to each key. 
 I thin I should have made it straight into a dictionary in the while loop, but not enitely sure how to do that.
 
-````def parse_fasta(filename):
+```def parse_fasta(filename):
     header = []
     sequence = []
     topology = []
@@ -33,7 +33,7 @@ I thin I should have made it straight into a dictionary in the while loop, but n
 if __name__ == '__main__':
     result_FASTA = parse_fasta("data.txt")
     print (result_FASTA)
-`````
+```
 # *Friday 16.02.2018*
 
 Yesterday was the first course day of KB8024. I made my first GitHub account and learnt how to add, commit and push
@@ -42,7 +42,7 @@ which is as I understand it the most imporatnt commands when using GitHub.
 
 GitHub works two ways. you can either make a repository online and clone it to your computer. OR you can create the repository on your computer and then add, commit and push the new repository to GitHub. 
 
-_Make a repository localy:_
+__Make a repository localy:__
 ```
 $ mkdir diary
 $ cd diary
