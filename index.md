@@ -1,4 +1,5 @@
 **Entry 16.02.2018**
+
 Hi
 So yesterday was the first course day of KB8024. I made my first GitHub account and learnt how to add, commit and push
 which is as I understand it the most imporatnt commands when using GitHub.
@@ -69,8 +70,3 @@ $ git log
 #
 #    write what updates was made here
 ```
-blockquote {
-	margin: 0 0 1.6rem 2.4rem;
-	padding-left: 0.8rem; /* Voire */
-	border-left: 4px solid rgba(0,0,0,0.08);
-font-style: normal;
