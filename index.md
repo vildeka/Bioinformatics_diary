@@ -1,3 +1,39 @@
+# *Monday 19.02.2018*
+Today I made a parser for the FASTA file containing the dataset I will use to train my predictor.
+I split the file content into three list containnig the identifier, aa sequence and the topology repectively.
+Then I made it into a dictionary where the identifier is the key, and the sequence and topology is the two values beloning to each key. 
+I thin I should have made it straight into a dictionary in the while loop, but not enitely sure how to do that.
+
+````def parse_fasta(filename):
+    header = []
+    sequence = []
+    topology = []
+
+ #write FAST into a three lists, header, sequence and topology. Removes \n and >
+    with open(filename, 'r') as f:
+        for x, line in enumerate(f):
+            if line[0] == ">":
+                #header.append(line.strip(">")) #only removes ">"
+                header.append(line[1:-1]) #alternative to remove both ">" and "\n"
+
+            elif x % 3 == 1: # gives every second line (% called modulus)
+                sequence.append(line.strip("\n"))
+            elif x % 3 == 2: # gives every third (line ==0 indicates starting at first line. ==2 indicates starting at third line)
+                topology.append(line.strip("\n"))
+
+#makes the list into a dictionary {header:(sequence,topology)}
+    variables = list(zip(sequence, topology))
+    #print (variables)
+    dictionary = dict(zip(header, variables))
+
+#makes the dictionary into a panda
+    df = pd.DataFrame(data=dictionary)
+    print (df)
+
+if __name__ == '__main__':
+    result_FASTA = parse_fasta("data.txt")
+    print (result_FASTA)
+`````
 # *Friday 16.02.2018*
 
 Yesterday was the first course day of KB8024. I made my first GitHub account and learnt how to add, commit and push
