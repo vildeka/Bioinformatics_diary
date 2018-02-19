@@ -1,13 +1,12 @@
-**Entry 16.02.2018**
+#*Entry 16.02.2018*
 
-Hi
-So yesterday was the first course day of KB8024. I made my first GitHub account and learnt how to add, commit and push
+Yesterday was the first course day of KB8024. I made my first GitHub account and learnt how to add, commit and push
 which is as I understand it the most imporatnt commands when using GitHub.
 
 
 GitHub works two ways. you can either make a repository online and clone it to your computer. OR you can create the repository on your computer and then add, commit and push the new repository to GitHub. 
 
-Make a repository localy:
+_Make a repository localy:_
 ```
 $ mkdir diary
 $ cd diary
@@ -22,7 +21,7 @@ The `git status` should give a output looking like this:
 #
 nothing to commit (create/copy files and use "git add" to track)
 ```
-Make the first diary entry:
+_Make the first diary entry:_
 ```
 $ nano first_entry.md  #the format should be md for markdown
 '''inside the text editior nano you write the markdown text 
@@ -57,7 +56,7 @@ output looks like this:
 Git stores a permanent copy if the file inside the special `.git diectory`.
 It is calle a commit and has the identifier f22b25e
 
-To push the update to GitHub:
+_To push the update to GitHub:_
 ```
 $ git push
 $ git log
