@@ -95,7 +95,7 @@ __To push the update to GitHub:__
 $ git push
 $ git log
 ```
-`git log` give the history of what is done recently:
+`git log` give the history of what is done recently. To quit window press Q:
 ```
 # commit f22b25e3233b4645dabd0d81e651fe074bd8e73b
 #Author: vildeka <vilde.kaldhusdal@gmail.com>
