@@ -1,5 +1,5 @@
 # *Friday 23.02.2018*
-Topic: mapping categorical data
+Topic: mapping categorical data <p>
 This has more or less been a day of confusion. I now understand that I undertsand very little of how to make this predictor. In some way you might call this some sort of progress. I have now wrecked the Ideea of doing the one-hot encoding from the pandas. (By by pandas!,for now annyway) it is too complicated at this stage. As i understand it, I need to make a encoding alphabet. Then a function that creates the windows. David was kind enough to enlighten me on the format of the input vetors to the SVM. so now I know how they should look. The input comes in form of two vectors for each example. One vector decipting all the windows (features) and one vector for the corresponding topology (labels) for each feature. 
 ```
 N(zeros to add) = W/2                  sequence     0GGCA0
@@ -27,6 +27,15 @@ print(keys)
 dictionary = dict(zip(keys, vals.T))
 #print(dictionary)
 ```
+The output looks like this:
+```
+{'Q': array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0]), 
+'S': array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0]), 
+'W': array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0]), 
+'G': array([0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), ...
+```
+Im not sure if it will be a problem that they are in array form. 
+
 I have to continue working on the topology vector tomorow if I find the time. 
 # *Thursday 22.02.2018*
 Today I spendt most of the day finding 5 more or less relevant articles for my project, and writing the project plan. then I started doing the one-hot encoding. I was not able to finnish it beacuse I got stuck on trying to extract the sequence from the panda into a string. (strong dislike of pandas right now)
