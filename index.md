@@ -1,7 +1,40 @@
+# *Thursday 22.02.2018*
+Today I spendt most of the day finding 5 more or less relevant articles for my project, and writing the project plan. then I started doing the one-hot encoding. I was not able to finnish it beacuse I got stuck on trying to extract the sequence from the panda into a string.(strong dislike of pandas right now)
+![https://img.huffingtonpost.com/asset/578d3ad91300002d0005e8cb.jpeg?cache=wkm8vunwwe&ops=scalefit_970_noupscale](src)
+# *Thuesday 20.02.2018*
+As mentioned in the last post I wanted to make the header, sequence and topology straight into the dictionary in the with loop. I now have noen this and my code currently looks like this:
+```
+import pandas as pd
+def parse_fasta(filename):
+    dictionary = {}
+ #write FAST into a three lists, header, sequence and topology. Removes \n and >  
+    with open(filename, 'r') as f:
+        for x, line in enumerate(f):
+            if line[0] == ">":
+                key = line[1:-1] #alternative to remove both ">" and "\n"
+            elif x % 3 == 1: # gives every second line (% called modulus %3)
+                A = line.strip("\n")
+            elif x % 3 == 2: # gives every third (line ==0 indicates starting at first line. ==2 indicates starting at third line)
+                B = line.strip("\n")
+                dictionary[key] = [A, B]
+
+    print (dictionary)
+```
+Now I have started think about how to make the predictor. what I belive
+#makes the dictionary into a panda     
+    df = pd.DataFrame(data=dictionary)
+    return (df)
+
+
+if __name__ == '__main__':    
+    result_FASTA = parse_fasta("datamini.txt")
+    print (result_FASTA)
+
+
 # *Monday 19.02.2018*
 Today I made a parser for the FASTA file containing the dataset I will use to train my predictor.
 I split the file content into three list containnig the identifier, aa sequence and the topology repectively.
-Then I made it into a dictionary where the identifier is the key, and the sequence and topology is the two values beloning to each key. 
+Then I made it into a dictionary where the identifier is the key, and the sequence and topology is the two values beloning to each key.
 I thin I should have made it straight into a dictionary in the whit loop, but not enitely sure how to do that.
 
 ```
@@ -38,7 +71,7 @@ Yesterday was the first course day of KB8024. I made my first GitHub account and
 which is as I understand it the most imporatnt commands when using GitHub.
 
 
-GitHub works two ways. you can either make a repository online and clone it to your computer. OR you can create the repository on your computer and then add, commit and push the new repository to GitHub. 
+GitHub works two ways. you can either make a repository online and clone it to your computer. OR you can create the repository on your computer and then add, commit and push the new repository to GitHub.
 
 __Make a repository localy:__
 ```
@@ -58,19 +91,19 @@ nothing to commit (create/copy files and use "git add" to track)
 __Make the first diary entry:__
 ```
 $ nano first_entry.md  #the format should be md for markdown
-'''inside the text editior nano you write the markdown text 
+'''inside the text editior nano you write the markdown text
 that you want to display in your diary post'''
-$ git add first_entry.md 
+$ git add first_entry.md
 $ git status
 ```
 The output for the `git status` should look like this:
 ```
 # On branch master
-# 
+#
 # Initial commit
 # Changes to be commited:
 #    (use "git rm --cached <file>..." to unstage)
-# 
+#
 #          new file: first_entry.md
 ```
 Git now know it is supposed to track the changes made to first_entry.md
@@ -78,9 +111,9 @@ Commiting:
 ```
 $ git commit -m "write what updates was made here"#comitts everything that has been updated
 ```
-the flag -m (for "message") enables you to give a short descriprion of the updates. when not usning 
-the flag the terminal will open the default text editior so that you can write a longer message 
-with header and longer description. 
+the flag -m (for "message") enables you to give a short descriprion of the updates. when not usning
+the flag the terminal will open the default text editior so that you can write a longer message
+with header and longer description.
 output looks like this:
 ```
 # [master (root-commit) f22b25e] write what update wass made here
