@@ -1,3 +1,19 @@
+# *Friday 23.02.2018*
+Topic: mapping categorical data
+This has more or less been a day of confusion. I now understand that I undertsand very little of how to make this predictor. In some way you might call this some sort of progress. I have now wrecked the Ideea of doing the one-hot encoding from the pandas. (By by pandas!,for now annyway) it is too complicated at this stage. As i understand it, I need to make a encoding alphabet. Then a function that creates the windows  However David vas kind enough to enlighten me on the format of the input vetors to the SVM. so now I know how they should look. 
+N(zeros to add) = W/2                  sequence     0GGCA0
+                = 3/2                                ||||                               
+                = 1                    topology      CHHE
+               
+N(features) = WxN(nucleic acid)                     sequence vector:                    topology vector:
+            = 3x4                                   0GG 0,0,0,0, 1,0,0,0, 1,0,0,0,      
+            = 12                                    GGC 1,0,0,0, 1,0,0,0, 0,1,0,0,
+                                                    GCA 1,0,0,0, 0,1,0,0, 0,0,1,0,
+                                                    CA0 0,1,0,0, 0,0,1,0, 0,0,0,0,
+G -> 1 0 0 0                 
+C -> 0 1 0 0
+A -> 0 0 1 0
+T -> 0 0 0 1
 # *Thursday 22.02.2018*
 Today I spendt most of the day finding 5 more or less relevant articles for my project, and writing the project plan. then I started doing the one-hot encoding. I was not able to finnish it beacuse I got stuck on trying to extract the sequence from the panda into a string. (strong dislike of pandas right now)
 However while searhing for a solution I accidentially came across this picture and it kinda saved my day.
