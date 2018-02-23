@@ -1,6 +1,8 @@
 # *Thursday 22.02.2018*
 Today I spendt most of the day finding 5 more or less relevant articles for my project, and writing the project plan. then I started doing the one-hot encoding. I was not able to finnish it beacuse I got stuck on trying to extract the sequence from the panda into a string.(strong dislike of pandas right now)
 ![alt txt](https://img.huffingtonpost.com/asset/578d3ad91300002d0005e8cb.jpeg?cache=wkm8vunwwe&ops=scalefit_970_noupscale)
+Image source:[Link](https://www.huffingtonpost.com/entry/panda-cubs-wilderness_us_578e4a97e4b0a0ae97c38363)
+While searhing for a solution I accidentially came across this picture and it kinda saved my day. 
 # *Thuesday 20.02.2018*
 As mentioned in the last post I wanted to make the header, sequence and topology straight into the dictionary in the with loop. I now have noen this and my code currently looks like this:
 ```
