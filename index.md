@@ -61,17 +61,16 @@ def parse_fasta(filename):
                 dictionary[key] = [A, B]
 
     print (dictionary)
-```
-Now I have started think about how to make the predictor. what I belive
+
 #makes the dictionary into a panda     
     df = pd.DataFrame(data=dictionary)
-    return (df)
-
+    return (df)    
 
 if __name__ == '__main__':    
     result_FASTA = parse_fasta("datamini.txt")
     print (result_FASTA)
-
+```
+Now I have to start to think about how to make the predictor. 
 
 # *Monday 19.02.2018*
 Today I made a parser for the FASTA file containing the dataset I will use to train my predictor.
