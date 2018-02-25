@@ -1,3 +1,5 @@
+# *Sunday 25.02.2018*
+I worked on the windows and I have more or less achived a finnished code, but I think I must tweak the format a little. Also very close to finnishe the topology vector. 
 # *Thursday 22.02.2018*
 Today I spendt most of the day finding 5 more or less relevant articles for my project, and writing the project plan. then I started doing the one-hot encoding. I was not able to finnish it beacuse I got stuck on trying to extract the sequence from the panda into a string.(strong dislike of pandas right now)
 ![https://img.huffingtonpost.com/asset/578d3ad91300002d0005e8cb.jpeg?cache=wkm8vunwwe&ops=scalefit_970_noupscale](src)
