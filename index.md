@@ -1,4 +1,67 @@
+# *Monday 25.02.2018*
+After working a whole day (09:00-18:30) I still dont have a working input for the SVM. I have spendt most of the day on the sliding window, to make it work with the dictionary created with the parser. seems it was a big mistake using a dictionary. it has mostly caused a lot of extra time and headaches. I should have gone for simple lists. My unfunctioning code is now looking like this:
+```
+#=========================input vectors (words)==============
 
+def input_words(parse_dict):
+
+    vals = np.identity(20, dtype=int)
+    keys = list("ACDEFGHIKLMNPQRSTVWY")
+    #print(keys)
+    aa_dict = dict(zip(keys, vals.T))
+    aa_dict['0'] = np.zeros(20, dtype=int)
+    #print(aa_dict)
+    
+    
+    
+    words= {}
+    seq_dict = parse_fasta("dataminix2.txt")
+    values = list(seq_dict.values())
+    
+    seq_list = []
+    for l in values:
+        seq_list.append(l[0])
+    print (seq_list)
+   
+   
+    window = 3
+    padding = window//2
+    
+    word_seq = []
+    for sequence in seq_list: # put on later to make it go throu all seqyences, messing up the rest of the code. look at 0 in word_seq
+        for i in range(len(sequence)):
+            if i > padding and i < len(sequence) - padding - 1: #-1 because you want second to last element 
+                word_seq.append(sequence[i-padding:i+padding+1])#+1 is to get the last element as well [icluded:notincluded]
+            elif i <= padding:
+                # head
+                print(i)
+                this_word = sequence[:i + padding + 1] #[:2] = PT, [:3]= PTV
+                zeros_needed = window - len(this_word)
+                word_seq.append('0' * zeros_needed + this_word)
+                print(this_word)
+            else:
+                # tail
+                print(i)
+                this_word = sequence[i-1:] #[43-1:]= ASC, [44-1]= SC
+                zeros_needed = window - len(this_word)
+                word_seq.append(this_word+'0' * zeros_needed)
+                print(this_word)
+        
+        print(word_seq)
+    
+    words2 = []
+    
+    for word in word_seq:    
+        words[word] = list(map(lambda n: aa_dict[n], word))    
+        x = []
+        for v in words.values():
+            b = np.concatenate(v)
+            x.append(b)
+        #print(x)
+        words2.append(x)
+    print(words2)
+
+```
 # *Sunday 25.02.2018*
 I worked on the windows and I have more or less achived a finnished code, but I think I must tweak the format a little. Also very close to finnishe the topology vector. 
 
