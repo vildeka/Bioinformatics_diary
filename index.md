@@ -1,8 +1,53 @@
+<<<<<<< HEAD
 # *Sunday 25.02.2018*
 I worked on the windows and I have more or less achived a finnished code, but I think I must tweak the format a little. Also very close to finnishe the topology vector. 
+=======
+# *Friday 23.02.2018*
+Topic: mapping categorical data <p>
+This has more or less been a day of confusion. I now understand that I undertsand very little of how to make this predictor. In some way you might call this some sort of progress. I have now wrecked the Ideea of doing the one-hot encoding from the pandas. (By by pandas!, for now annyway) it is too complicated at this stage. As i understand it, I need to make a encoding alphabet. Then a function that creates the windows. David was kind enough to enlighten me on the format of the input vetors to the SVM. So now I know how they should look. The input comes in form of two vectors for each example. One vector decipting all the windows (features) and one vector for the corresponding topology (labels) for each feature. 
+```
+N(zeros to add) = W/2                 sequence     0GGCA0
+                = 3/2                               ||||                               
+                = 1                   topology      CHHS
+               
+N(features) = WxN(nucleic acid states)             sequence vector:                    topology vector:
+            = 3x4                                  0GG 0,0,0,0, 1,0,0,0, 1,0,0,0,      3
+            = 12                                   GGC 1,0,0,0, 1,0,0,0, 0,1,0,0,      1
+                                                   GCA 1,0,0,0, 0,1,0,0, 0,0,1,0,      1
+                                                   CA0 0,1,0,0, 0,0,1,0, 0,0,0,0,      2
+W = window
+                                                   sequence alphabet:                 topology encoder:
+                                                   G -> 1 0 0 0                       H = 1    
+                                                   C -> 0 1 0 0                       S = 2
+                                                   A -> 0 0 1 0                       C = 3
+                                                   T -> 0 0 0 1
+```
+I have maneged to make a sequence alphabet:
+```
+mport numpy as np
+vals = np.identity(20, dtype=int)
+keys = list("ACDEFGHIKLMNPQRSTVWY")
+print(keys)
+dictionary = dict(zip(keys, vals.T))
+#print(dictionary)
+```
+The output looks like this:
+```
+{'Q': array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0]), 
+'S': array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0]), 
+'W': array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0]), 
+'G': array([0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), ...
+```
+Im not sure if it will be a problem that they are in array form. 
+
+I have to continue working on the topology vector tomorow if I find the time. 
+>>>>>>> 5c8be59e7cea636006ee7cba8fce3d81a1128776
 # *Thursday 22.02.2018*
-Today I spendt most of the day finding 5 more or less relevant articles for my project, and writing the project plan. then I started doing the one-hot encoding. I was not able to finnish it beacuse I got stuck on trying to extract the sequence from the panda into a string.(strong dislike of pandas right now)
-![https://img.huffingtonpost.com/asset/578d3ad91300002d0005e8cb.jpeg?cache=wkm8vunwwe&ops=scalefit_970_noupscale](src)
+Today I spendt most of the day finding 5 more or less relevant articles for my project, and writing the project plan. then I started doing the one-hot encoding. I was not able to finnish it beacuse I got stuck on trying to extract the sequence from the panda into a string. (strong dislike of pandas right now)
+However while searhing for a solution I accidentially came across this picture and it kinda saved my day.
+![alt txt](https://img.huffingtonpost.com/asset/578d3ad91300002d0005e8cb.jpeg?cache=wkm8vunwwe&ops=scalefit_970_noupscale)
+Image source:[Link](https://www.huffingtonpost.com/entry/panda-cubs-wilderness_us_578e4a97e4b0a0ae97c38363)
+ 
 # *Thuesday 20.02.2018*
 As mentioned in the last post I wanted to make the header, sequence and topology straight into the dictionary in the with loop. I now have noen this and my code currently looks like this:
 ```
@@ -21,17 +66,16 @@ def parse_fasta(filename):
                 dictionary[key] = [A, B]
 
     print (dictionary)
-```
-Now I have started think about how to make the predictor. what I belive
+
 #makes the dictionary into a panda     
     df = pd.DataFrame(data=dictionary)
-    return (df)
-
+    return (df)    
 
 if __name__ == '__main__':    
     result_FASTA = parse_fasta("datamini.txt")
     print (result_FASTA)
-
+```
+Now I have to start to think about how to make the predictor. 
 
 # *Monday 19.02.2018*
 Today I made a parser for the FASTA file containing the dataset I will use to train my predictor.
