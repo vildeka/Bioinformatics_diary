@@ -1,7 +1,7 @@
-<<<<<<< HEAD
+
 # *Sunday 25.02.2018*
 I worked on the windows and I have more or less achived a finnished code, but I think I must tweak the format a little. Also very close to finnishe the topology vector. 
-=======
+
 # *Friday 23.02.2018*
 Topic: mapping categorical data <p>
 This has more or less been a day of confusion. I now understand that I undertsand very little of how to make this predictor. In some way you might call this some sort of progress. I have now wrecked the Ideea of doing the one-hot encoding from the pandas. (By by pandas!, for now annyway) it is too complicated at this stage. As i understand it, I need to make a encoding alphabet. Then a function that creates the windows. David was kind enough to enlighten me on the format of the input vetors to the SVM. So now I know how they should look. The input comes in form of two vectors for each example. One vector decipting all the windows (features) and one vector for the corresponding topology (labels) for each feature. 
@@ -41,7 +41,7 @@ The output looks like this:
 Im not sure if it will be a problem that they are in array form. 
 
 I have to continue working on the topology vector tomorow if I find the time. 
->>>>>>> 5c8be59e7cea636006ee7cba8fce3d81a1128776
+
 # *Thursday 22.02.2018*
 Today I spendt most of the day finding 5 more or less relevant articles for my project, and writing the project plan. then I started doing the one-hot encoding. I was not able to finnish it beacuse I got stuck on trying to extract the sequence from the panda into a string. (strong dislike of pandas right now)
 However while searhing for a solution I accidentially came across this picture and it kinda saved my day.
