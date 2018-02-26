@@ -12,8 +12,6 @@ def input_words(parse_dict):
     aa_dict['0'] = np.zeros(20, dtype=int)
     #print(aa_dict)
     
-    
-    
     words= {}
     seq_dict = parse_fasta("dataminix2.txt")
     values = list(seq_dict.values())
@@ -22,7 +20,6 @@ def input_words(parse_dict):
     for l in values:
         seq_list.append(l[0])
     print (seq_list)
-   
    
     window = 3
     padding = window//2
