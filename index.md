@@ -1,4 +1,107 @@
-# *Monday 25.02.2018*
+# *Thuesday 27.02.2018*
+I was wrong!!
+After a helpful hour in the lab this morning I finaly have my finnished code for the outpu. Turuns out the dictionary was pretty neat after all. David showed me how to use it to itterate over the sequence and topology at the same time. The code was also functiononing last night, I just thought it looked wrong with 0 inside the word_seq. But this makes totaly sense as it now contains all ofthe sequences and thus have 0's falanking each of the sequences. (I was wery tired last evening at the end).
+```
+word_seq = ['0PY', 'PYT', 'YTV', 'TV0', '0EP', 'EPA', 'PAT', 'ATI', 'TI0', '0MN', 'MNI', 'NI0']
+topology = [3, 3, 2, 2, 2, 3, 2, 2, 2, 3, 3, 1]
+```
+My input lookes like this:
+```
+ x = features 
+ y = topology
+ 
+ x = [array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,      y = [ 3, 3, 1 ]
+             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0]), 
+      array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 
+             0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), 
+      array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 
+             0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])]
+```
+A feature is the same as the encoding of a word. 
+An example is the feature + the topology.
+Each array is actually one a single line and deciptes a single feature. But be able to visulazie the whole array in the same window I show 20 0's on each line. 20 0's deciptes the encoding for one amino acid. 
+
+My finished code looks like this:
+```
+#===================parser========================
+import pandas as pd
+import numpy as np
+def parse_fasta(filename):
+    parse_dict = {}
+    #sequence = ""
+ #write FAST into a three lists, header, sequence and topology. Removes \n and >
+    with open(filename, 'r') as f:
+        for x, line in enumerate(f):
+            if line[0] == ">":
+                key = line[1:-1] #alternative to remove both ">" and "\n"
+            elif x % 3 == 1: # gives every second line (% called modulus %3)
+                A = line.strip("\n")
+                #sequence.append(line.strip("\n"))
+            elif x % 3 == 2: # gives every third (line ==0 indicates starting at first line. ==2 indicates starting at third line)
+                B = line.strip("\n")
+                #newA = [for i in A ]
+                parse_dict[key] = [A, B]
+
+    return (parse_dict)
+
+#================input vectors (words/features and topology)==============
+
+def input_words(seq_dict, window=3):
+    padding = window//2
+    
+    # dictionary of aa:
+    vals = np.identity(20, dtype=int)
+    keys = list("ACDEFGHIKLMNPQRSTVWY")
+    aa_dict = dict(zip(keys, vals.T))
+    aa_dict['0'] = np.zeros(20, dtype=int)
+    
+    # dictionary of topology:
+    topo = {'H':1, 'S':2, 'C':3}
+    
+    #list of words:
+    word_seq = []
+    
+    #final input:
+    topologies = []
+    features = []
+    
+    for sequence, topology in seq_dict.values(): # put on later to make it go through all seqyences, 
+        for i in range(len(sequence)):
+            topologies.append(topo[topology[i]])
+            if i > padding and i < len(sequence) - padding - 1: #-1 because you want second to last element 
+                word_seq.append(sequence[i-padding:i+padding+1])#+1 is to get the last element as well [icluded:notincluded]
+            elif i <= padding:
+                # head
+                print(i)
+                this_word = sequence[:i + padding + 1] #[:2] = PT, [:3]= PTV
+                zeros_needed = window - len(this_word)
+                word_seq.append('0' * zeros_needed + this_word)
+                print(this_word)
+            else:
+                # tail
+                print(i)
+                this_word = sequence[i-1:] #[43-1:]= ASC, [44-1]= SC
+                zeros_needed = window - len(this_word)
+                word_seq.append(this_word+'0' * zeros_needed)
+                print(this_word)          
+             
+    print(word_seq)
+    print(topologies)
+    words2 = []
+  
+    for word in word_seq:    
+        words2.append(list(map(lambda n: aa_dict[n], word)))    
+        #words[word] = list(map(lambda n: aa_dict[n], word))    
+        
+        for v in words2:
+            b = np.concatenate(v)
+            features.append(b)
+    print(features)
+```
+# *Monday 26.02.2018*
 After working a whole day (09:00-18:30) I still dont have a working input for the SVM. I have spendt most of the day on the sliding window, to make it work with the dictionary created with the parser. seems it was a big mistake using a dictionary. it has mostly caused a lot of extra time and headaches. I should have gone for simple lists. My unfunctioning code is now looking like this:
 ```
 #=========================input vectors (words)==============
