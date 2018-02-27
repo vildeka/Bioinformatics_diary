@@ -6,6 +6,7 @@ word_seq = ['0PY', 'PYT', 'YTV', 'TV0', '0EP', 'EPA', 'PAT', 'ATI', 'TI0', '0MN'
 topology = [3, 3, 2, 2, 2, 3, 2, 2, 2, 3, 3, 1]
 ```
 My input lookes like this:
+Shows: 3 examples 
 ```
  x = features 
  y = topology
@@ -20,9 +21,10 @@ My input lookes like this:
              0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
              0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])]
 ```
-A feature is the same as the encoding of a word. 
-An example is the feature + the topology.
-Each array is actually one a single line and deciptes a single feature. But be able to visulazie the whole array in the same window I show 20 0's on each line. 20 0's deciptes the encoding for one amino acid. 
+A *feature* is the same as the encoding of a word. 
+An *example* is the feature + the topology.
+
+Each array is actually one a single line and deciptes a single feature. But to make it easier to visulazie I show 20 0's on each line. 20 0's deciptes the encoding for one amino acid. 
 
 My finished code looks like this:
 ```
