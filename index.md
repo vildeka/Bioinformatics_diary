@@ -102,6 +102,12 @@ def input_words(seq_dict, window=3):
             b = np.concatenate(v)
             features.append(b)
     print(features)
+    
+if __name__ == '__main__':
+    result_FASTA = parse_fasta("dataminix2.txt")
+    print (result_FASTA)
+    
+    result_words = input_words(parse_fasta("dataminix2.txt"))
 ```
 # *Monday 26.02.2018*
 After working a whole day (09:00-18:30) I still dont have a working input for the SVM. I have spendt most of the day on the sliding window, to make it work with the dictionary created with the parser. seems it was a big mistake using a dictionary. it has mostly caused a lot of extra time and headaches. I should have gone for simple lists. My unfunctioning code is now looking like this:
