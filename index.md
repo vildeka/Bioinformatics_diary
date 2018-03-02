@@ -1,5 +1,11 @@
 # *Friday 2.03.2018*
 Its been a while since I have made an entry. the reason for this is because of the article presentation and me moving. Wednesday I spent the whole day reading my article and trying to dechipher the equations explaning PesAA. It took a while but I belive I understand at least half of the equation, which im choosing to be enough to present the paper. Then from 15:00 I listened to the presentations of the other students in my group. By the time we was finnished it was almost 19:00. So in effect my only progress on my project that day was one line of code:
+`str_topo = "".join(topology)`
+This was the only code missing for my script to fufill this weeks requirements:
+"Have a program that can take a sequence, a feature (topology) and create an input vector to SVM. Use this to train a
+SVM and predict on a separate protein."
+
+even tho it meets the requirements it is not completley finished. Now it can take in a standarized FASTA file with several proteins and do a prediction. However, the predicted topology is printed in the form of one contineous string for all proteins. So I need to change my parser function in such a way that my input vector function only takes one prtein at a time. Currently the x- and y-vectors are created in a single function and in the same foor loop. John has suggsested 
 
 # *Thuesday 27.02.2018*
 I was wrong!!
