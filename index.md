@@ -1,3 +1,6 @@
+# *Friday 2.03.2018*
+Its been a while since I have made an entry. the reason for this is because of the article presentation and me moving. Wednesday I spent the whole day reading my article and trying to dechipher the equations explaning PesAA. It took a while but I belive I understand at least half of the equation, which im choosing to be enough to present the paper. Then from 15:00 I listened to the presentations of the other students in my group. By the time we was finnished it was almost 19:00. So in effect my only progress on my project that day was one line of code:
+
 # *Thuesday 27.02.2018*
 I was wrong!!
 After a helpful hour in the lab this morning I finaly have my finnished code for the outpu. Turuns out the dictionary was pretty neat after all. David showed me how to use it to itterate over the sequence and topology at the same time. The code was also functiononing last night, I just thought it looked wrong with 0 inside the word_seq. But this makes totaly sense as it now contains all ofthe sequences and thus have 0's falanking each of the sequences. (I was wery tired last evening at the end).
