@@ -5,7 +5,7 @@ This was the only code missing for my script to fufill this weeks requirements:
 "Have a program that can take a sequence, a feature (topology) and create an input vector to SVM. Use this to train a
 SVM and predict on a separate protein."
 
-even tho it meets the requirements it is not completley finished. Now it can take in a standarized FASTA file with several proteins and do a prediction. However, the predicted topology is printed in the form of one contineous string for all proteins. So I need to change my parser function in such a way that my input vector function only takes one prtein at a time. Currently the x- and y-vectors are created in a single function and in the same foor loop. John has suggsested 
+even tho it meets the requirements it is not completley finished. Now it can take in a standarized FASTA file with several proteins and do a prediction. However, the predicted topology is printed in the form of one contineous string for all proteins. So I need to change my parser function in such a way that my input vector function only takes one prtein at a time. Currently the x- and y-vectors are created in a single function and in the same foor loop. John has suggsested that this should be done separetley. Aperently one function "should do one thing and do it well". then it should be 
 
 # *Thuesday 27.02.2018*
 I was wrong!!
