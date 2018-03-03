@@ -1,3 +1,5 @@
+# *Saturday 3.03.2018*
+On Thursday I dident have time to do anything because I spendt the whole day moving all my belongings to the new place. Luckely I moved only like three blocks up the street, coz as it turns out I have a lot of stuff. Me and Max did most of the hauling. I nicked a trolley from Ica Lappis, which was super helpull. However I forgott my spatula so, I guess I have to go back for it. Im not giving that away. 
 # *Friday 2.03.2018*
 Its been a while since I have made an entry. the reason for this is because of the article presentation and me moving. Wednesday I spent the whole day reading my article and trying to dechipher the equations explaning PesAA. It took a while but I belive I understand at least half of the equation, which im choosing to be enough to present the paper. Then from 15:00 I listened to the presentations of the other students in my group. By the time we was finnished it was almost 19:00. So in effect my only progress on my project that day was one line of code:
 `str_topo = "".join(topology)`
@@ -5,7 +7,7 @@ This was the only code missing for my script to fufill this weeks requirements:
 "Have a program that can take a sequence, a feature (topology) and create an input vector to SVM. Use this to train a
 SVM and predict on a separate protein."
 
-even tho it meets the requirements it is not completley finished. Now it can take in a standarized FASTA file with several proteins and do a prediction. However, the predicted topology is printed in the form of one contineous string for all proteins. So I need to change my parser function in such a way that my input vector function only takes one prtein at a time. Currently the x- and y-vectors are created in a single function and in the same foor loop. John has suggsested that this should be done separetley. Aperently one function "should do one thing and do it well". then it should be 
+even tho it meets the requirements it is not completley finished. Now it can take in a standarized FASTA file with several proteins and do a prediction. However, the predicted topology is printed in the form of one contineous string for all proteins. So I need to change my parser function in such a way that my input vector function only takes one prtein at a time. Currently the x- and y-vectors are created in a single function and in the same foor loop. John has suggsested that this should be done separetley. Aperently one function "should do one thing and do it well". then the differnt functions should be wrapped into the script, working in a pipeline style. 
 
 # *Thuesday 27.02.2018*
 I was wrong!!
