@@ -1,5 +1,6 @@
 # *Saturday 3.03.2018*
 On Thursday I dident have time to do anything because I spendt the whole day moving all my belongings to the new place. Luckely I moved only like three blocks up the street, coz as it turns out I have a lot of stuff. Me and Max did most of the hauling. I nicked a trolley from Ica Lappis, which was super helpull. However I forgott my spatula so, I guess I have to go back for it. Im not giving that away. 
+
 # *Friday 2.03.2018*
 Its been a while since I have made an entry. the reason for this is because of the article presentation and me moving. Wednesday I spent the whole day reading my article and trying to dechipher the equations explaning PesAA. It took a while but I belive I understand at least half of the equation, which im choosing to be enough to present the paper. Then from 15:00 I listened to the presentations of the other students in my group. By the time we was finnished it was almost 19:00. So in effect my only progress on my project that day was one line of code:
 `str_topo = "".join(topology)`
