@@ -1,3 +1,5 @@
+# *Monday 5.03.2018*
+Today I just tried to clean up my code. Making it so that each seperate function is doing only one thing. My predictior is now able to predict each protein in a FASTA file seperatly. Hopefully this will benefitt me later, becaus I feel like im running out of time to improve the predictior. 
 # *Saturday 3.03.2018*
 On Thursday I dident have time to do anything because I spendt the whole day moving all my belongings to the new place. Luckely I moved only like three blocks up the street, coz as it turns out I have a lot of stuff. Me and Max did most of the hauling. I nicked a trolley from Ica Lappis, which was super helpull. However I forgott my spatula so, I guess I have to go back for it. Im not giving that away. 
 
