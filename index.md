@@ -1,3 +1,11 @@
+# *Wednesday 7.03.2018*
+Today I continued cleaning my code, because I constantley realize that there is more things required for it to be easely run on other computers. I changed the final output of the prediction so that it now is written into a FASTA file. I also finished the cross validation for finding the best window size I landed on 7 accordint to this graph. The standard deviation is pretty high, so it seems to be pretty good wit a windowsize around 7-9. (window 15 is best for PSIPRED)
+I pudated my README.md file. I now contains the description of all of my datasets and my scripts. 
+![alt txt]()
+
+# *Tuesday 6.03.2018*
+I had personal life to deal with.
+
 # *Monday 5.03.2018*
 Today I just tried to clean up my code. Making it so that each seperate function is doing only one thing. My predictior is now able to predict each protein in a FASTA file seperatly. Hopefully this will benefitt me later, becaus I feel like im running out of time to improve the predictior. 
 # *Saturday 3.03.2018*
