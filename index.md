@@ -1,6 +1,7 @@
 # *Thursday 8.03.2018*
 Overnight I ran the cross validation on my whole dataset. It gave a very differnt result than the cross validation om my datamini.txt datset. I used fivefold cross validation  
 ```
+{windowsize: average score}
 {3: 0.5468, 5: 0.5940, 7: 0.6092, 9: 0.61560, 11: 0.62026, 13: 0.62300, 15: 0.62424, 17: 0.62471, 19: 0.62284}
 ```
 <img src="https://github.com/vildeka/vildeka.github.io/blob/master/Crossval_wholedata%20%E2%80%93%20Kopi.png?raw=true" width="500" height="400" />
