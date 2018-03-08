@@ -1,7 +1,15 @@
+# *Thursday 8.03.2018*
+Overnight I ran the cross validation on my whole dataset. It gave a very differnt result than the cross validation om my datamini.txt datset. 
+```
+{3: 0.5468 5: 0.5940 7: 0.6092 9: 0.61560 11: 0.62026 13: 0.62300 15: 0.62424 17: 0.62471 19: 0.62284}
+```
+<img src="https://github.com/vildeka/vildeka.github.io/blob/master/Crossval_wholedata%20%E2%80%93%20Kopi.png?raw=true" width="500" height="400" />
+
 # *Wednesday 7.03.2018*
 Today I continued cleaning my code, because I constantley realize that there is more things required for it to be easely run on other computers. I changed the final output of the prediction so that it now is written into a FASTA file. I also finished the cross validation for finding the best window size I landed on 7 accordint to this graph. The standard deviation is pretty high, so it seems to be pretty good wit a windowsize around 7-9. (window 15 is best for PSIPRED)
-I pudated my README.md file. I now contains the description of all of my datasets and my scripts. 
-![alt txt](https://github.com/vildeka/vildeka.github.io/blob/master/Crossval_wholedata%20%E2%80%93%20Kopi.png?raw=true)
+I updated my README.md file. I now contains the description of all of my datasets and my scripts. 
+
+<img src="https://github.com/vildeka/vildeka.github.io/blob/master/Crossval_wholedata%20%E2%80%93%20Kopi.png?raw=true" width="500" height="400" />
 
 # *Tuesday 6.03.2018*
 I had personal life to deal with.
