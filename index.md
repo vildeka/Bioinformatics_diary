@@ -1,5 +1,5 @@
 # *Thursday 8.03.2018*
-Overnight I ran the cross validation on my whole dataset. It gave a very differnt result than the cross validation om my datamini.txt datset. I used fivefold cross validation, so the score showed in the dictionary is the average of all of the five scores given for each windowsize. 
+Overnight I ran the cross validation on my whole dataset. It gave a very differnt result than the cross validation om my datamini.txt datset. I used fivefold cross validation, so the score showed in the dictionary is the average of all of the five scores given for each windowsize. <br/>
 PSIPRED uses a windowsize of 15 residues (Jones, 1999). So this seems to fit with my findings. I got a slightly better result for  windowsize 17, but the difference is minimal and the standard deviation is slighetly worse for windowsize of 17. so in the intrest of time and because of the litterature I will go with windowsize 15.   
 Jones DT. (1999) Protein secondary structure prediction based on position-specific scoring matrices. J. Mol. Biol. 292: 195-202. 
 ```
