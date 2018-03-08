@@ -1,15 +1,58 @@
 # *Thursday 8.03.2018*
-Overnight I ran the cross validation on my whole dataset. It gave a very differnt result than the cross validation om my datamini.txt datset. 
+Overnight I ran the cross validation on my whole dataset. It gave a very differnt result than the cross validation om my datamini.txt datset. I used fivefold cross validation  
 ```
-{3: 0.5468 5: 0.5940 7: 0.6092 9: 0.61560 11: 0.62026 13: 0.62300 15: 0.62424 17: 0.62471 19: 0.62284}
+{3: 0.5468, 5: 0.5940, 7: 0.6092, 9: 0.61560, 11: 0.62026, 13: 0.62300, 15: 0.62424, 17: 0.62471, 19: 0.62284}
 ```
 <img src="https://github.com/vildeka/vildeka.github.io/blob/master/Crossval_wholedata%20%E2%80%93%20Kopi.png?raw=true" width="500" height="400" />
 
 # *Wednesday 7.03.2018*
-Today I continued cleaning my code, because I constantley realize that there is more things required for it to be easely run on other computers. I changed the final output of the prediction so that it now is written into a FASTA file. I also finished the cross validation for finding the best window size I landed on 7 accordint to this graph. The standard deviation is pretty high, so it seems to be pretty good wit a windowsize around 7-9. (window 15 is best for PSIPRED)
-I updated my README.md file. I now contains the description of all of my datasets and my scripts. 
+Today I continued cleaning my code, because I constantley realize that there is more things required for it to be easely run on other computers. I changed the final output of the prediction so that it now is written into a FASTA file. I updated my README.md file. It now contains the description of all of my datasets and my scripts. 
+
+I also finished the cross validation for finding the best window size. Using fivefold cross validation on the datset datamini.txt  gave me a best windowsize of 7. As the plot shows The standard deviation is pretty high for windowsize 7 and 9, so it seems to be equally good with a windowsize around 7-9. (window 15 is best for PSIPRED)
 
 <img src="https://github.com/vildeka/vildeka.github.io/blob/master/Crossval_wholedata%20%E2%80%93%20Kopi.png?raw=true" width="500" height="400" />
+
+my script for cross validation:
+```
+import numpy as np
+from sklearn import svm
+from sklearn.model_selection import cross_val_score
+import pylab as plt
+
+from dataparser import parse_fasta, inputvector_X, inputvector_y
+
+#X = train_inputvector_X(parse_fasta('../project/datasets/data.txt'))
+#y = inputvector_y(parse_fasta('../project/datasets/data.txt'), )
+x_data = parse_fasta('../project/datasets/data.txt')
+y = inputvector_y(parse_fasta('../project/datasets/data.txt'))
+
+results = dict()
+result_average = dict()
+
+for windowsize in range(3, 20, 2):
+    #list for one protein
+    X = list()
+
+    for sequence, topology in x_data.values(): 
+        X_temp = inputvector_X(sequence, windowsize)
+        X.append(X_temp)
+        
+    X = np.concatenate(X)
+    model = svm.SVC(decision_function_shape='ovo')
+    score = cross_val_score(model, X, y, cv=5, verbose=True, n_jobs=-1)
+    results[windowsize] = score
+        
+for window, scores in results.items():
+    score = np.average(scores)
+    result_average[window] = score
+    
+    plt.errorbar(window, score, color='b', yerr=np.std(scores), marker='o')
+ 
+print()
+print()
+print (result_average)
+plt.show()
+```
 
 # *Tuesday 6.03.2018*
 I had personal life to deal with.
