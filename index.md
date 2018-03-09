@@ -1,5 +1,6 @@
 # *Friday 9.03.2018*
 After training the dataset datamini.txt again but with the new windowsize of 15. I get a score of 0.600. which is a slight improvement from the model with window 7 that gave a score of 0.592
+
 windowsize 15:
 ```
 u2361@stud33:~/project$ python3 train_test.py
