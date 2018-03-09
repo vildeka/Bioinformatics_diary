@@ -1,3 +1,17 @@
+# *Friday 9.03.2018*
+After training the dataset datamini.txt again but with the new windowsize of 15. I get a score of 0.600. which is a slight improvement from the model with window 7 that gave a score of 0.592
+windowsize 15:
+```u2361@stud33:~/project$ python3 train_test.py
+(4380, 300)
+0.600456621005
+```
+Windowsize 7:
+```u2361@stud33:~/project$ python3 train_test.py
+(4380, 140)
+0.591780821918
+```
+
+
 # *Thursday 8.03.2018*
 Overnight I ran the cross validation on my whole dataset. It gave a very differnt result than the cross validation om my datamini.txt datset. I used fivefold cross validation, so the score showed in the dictionary is the average of all of the five scores given for each windowsize. <br/>
 PSIPRED uses a windowsize of 15 residues (Jones, 1999). So this seems to fit with my findings. I got a slightly better result for  windowsize 17, but the difference is minimal and the standard deviation is slighetly worse for windowsize of 17. so in the intrest of time and because of the litterature I will go with windowsize 15.   
