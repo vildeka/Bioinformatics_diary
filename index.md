@@ -31,7 +31,7 @@ Today I continued cleaning my code, because I constantley realize that there is 
 
 I also finished the cross validation for finding the best window size. Using fivefold cross validation on the datset datamini.txt  gave me a best windowsize of 7. As the plot shows The standard deviation is pretty high for windowsize 7 and 9, so it seems to be equally good with a windowsize around 7-9. (window 15 is best for PSIPRED)
 
-<img src="https://github.com/vildeka/vildeka.github.io/blob/master/Crossval_wholedata%20%E2%80%93%20Kopi.png?raw=true" width="500" height="400" />
+<img src="https://github.com/vildeka/vildeka.github.io/blob/master/crossval_score_win7_plt.png?raw=true" width="500" height="400" />
 
 my script for cross validation:
 ```
