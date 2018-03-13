@@ -1,3 +1,9 @@
+# *Tuesday 9.03.2018*
+Today I have been working the whoole day with the PSSM. I had to tweak or revrite most of my previous code to get it to work with the PSSM input. I have now managed to train a model on 10 proteins, but the prediction is still not working. 
+I discovered that I have a problem with the creation of the singel fasta files. it is creating duplicates whithout any content also the name is lacking the last charachter. I can not for the life of me figure out what is wrong. And I really dont want to change the script to much, as I was very happy with the code. 
+# *Monday 9.03.2018*
+I worked on the PSSM getting the bash script to work. The bash script is making the PSSM matrixes from the fasta files. 
+I also made a separet python script who makes the fasta file into seperate files.Sorry about the short and non informative diary entries, but I have been so busy trying to actually get the code to work that I haven't prioritized to write the diary. 
 # *Friday 9.03.2018*
 After training the dataset datamini.txt again but with the new windowsize of 15. I get a score of 0.600. which is a slight improvement from the model with window 7 that gave a score of 0.592
 
