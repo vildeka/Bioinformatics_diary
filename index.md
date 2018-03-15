@@ -1,3 +1,7 @@
+# *Thursday 9.03.2018*
+Today I have done a lot of 
+# *Wednesday 9.03.2018*
+
 # *Tuesday 9.03.2018*
 Today I have been working the whoole day with the PSSM. I had to tweak or revrite most of my previous code to get it to work with the PSSM input. I have now managed to train a model on 10 proteins, but the prediction is still not working. 
 I discovered that I have a problem with the creation of the singel fasta files. it is creating duplicates whithout any content also the name is lacking the last charachter. I can not for the life of me figure out what is wrong. And I really dont want to change the script to much, as I was very happy with the code. 
