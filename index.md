@@ -10,7 +10,7 @@ Im getting a bit concerned about the report. So much time has gone into just get
 # *Wednesday 9.03.2018*
 so...I diden't write annything in my diary yesterday (today is thursday). Sorry about that. I completley forgott about it as I abruptly had to leave fom the lab before 21:00. I had recived notfication that I could pick up my parcel with my new curtains at Lappis Ica. they close the postnord service at 21:00, so I had to leave quickly. I even got so flustered that I put my phone in my backpack instead of my pocket. when outside of the building I realised I diden't know where it was and I had to wait until someone let me in (because my access card was with my phone). I then had to go out into the outdoor atrium and sign-lanuage to Helen that I thought I had forgotten my phone. After some fuitles serching preformed by Helen and Cecilia, Helen called me and I located the buzzing sound from my backpack. By half runnung half racewalking, I maged to get to Ica in time to get my curtains. I am glad to reporte that the curtains exceeded my expectations. 
 
-what did I do on wednesday for the project?... im not enirely sure. the days and houers are kinda bluring with all the time spendt in the lab. However I know I did a lot of pushng to github that day.
+what did I do on wednesday for the project?... im not enirely sure. the days and hours are kinda bluring with all the time spendt in the lab. However I know I did a lot of pushing to github that day.
 
 # *Tuesday 9.03.2018*
 Today I have been working the whoole day with the PSSM. I had to tweak or revrite most of my previous code to get it to work with the PSSM input. I have now managed to train a model on 10 proteins, but the prediction is still not working. 
