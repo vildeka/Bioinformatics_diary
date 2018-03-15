@@ -1,4 +1,5 @@
 # *Thursday 9.03.2018*
+11:14 - still in the lab...
 Today I have done a lot of 
 # *Wednesday 9.03.2018*
 
