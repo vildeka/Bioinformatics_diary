@@ -1,4 +1,6 @@
-# *Thursday 9.03.2018*
+# *Friday 16.03.2018*
+
+# *Thursday 15.03.2018*
 11:14 - still in the lab...
 Today I have:
 - made confusion matrix plot
@@ -7,15 +9,15 @@ Today I have:
 
 Im getting a bit concerned about the report. So much time has gone into just geting the code to work, so I feel a bit lost when it comes to the actuall significance of all of the parameters and models I have been trying to create. 
 
-# *Wednesday 9.03.2018*
+# *Wednesday 14.03.2018*
 so...I diden't write annything in my diary yesterday (today is thursday). Sorry about that. I completley forgott about it as I abruptly had to leave fom the lab before 21:00. I had recived notfication that I could pick up my parcel with my new curtains at Lappis Ica. they close the postnord service at 21:00, so I had to leave quickly. I even got so flustered that I put my phone in my backpack instead of my pocket. when outside of the building I realised I diden't know where it was and I had to wait until someone let me in (because my access card was with my phone). I then had to go out into the outdoor atrium and sign-lanuage to Helen that I thought I had forgotten my phone. After some fuitles serching preformed by Helen and Cecilia, Helen called me and I located the buzzing sound from my backpack. By half runnung half racewalking, I maged to get to Ica in time to get my curtains. I am glad to reporte that the curtains exceeded my expectations. 
 
 what did I do on wednesday for the project?... im not enirely sure. the days and hours are kinda bluring with all the time spendt in the lab. However I know I did a lot of pushing to github that day.
 
-# *Tuesday 9.03.2018*
+# *Tuesday 13.03.2018*
 Today I have been working the whoole day with the PSSM. I had to tweak or revrite most of my previous code to get it to work with the PSSM input. I have now managed to train a model on 10 proteins, but the prediction is still not working. 
 I discovered that I have a problem with the creation of the singel fasta files. it is creating duplicates whithout any content also the name is lacking the last charachter. I can not for the life of me figure out what is wrong. And I really dont want to change the script to much, as I was very happy with the code. 
-# *Monday 9.03.2018*
+# *Monday 12.03.2018*
 I worked on the PSSM getting the bash script to work. The bash script is making the PSSM matrixes from the fasta files. 
 I also made a separet python script who makes the fasta file into seperate files.Sorry about the short and non informative diary entries, but I have been so busy trying to actually get the code to work that I haven't prioritized to write the diary. 
 # *Friday 9.03.2018*
