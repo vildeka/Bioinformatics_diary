@@ -1,5 +1,5 @@
 # *Friday 16.03.2018*
-
+everything is a mess. I have no lost all origanization 
 # *Thursday 15.03.2018*
 11:14 - still in the lab...
 Today I have:
